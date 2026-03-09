@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prince Tennis — Creative Pitch Deck</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --prince-black: #0a0a0a;
+    --prince-white: #f5f5f0;
+    --prince-green: #00c853;
+    --prince-lime: #b2ff59;
+    --prince-dark-green: #007c34;
+    --prince-gray: #888;
+    --prince-light: #e8e8e3;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html {
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background: var(--prince-black);
+    color: var(--prince-white);
+    line-height: 1.5;
+  }
+
+  .slide {
+    min-height: 100vh;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px 80px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .slide-number {
+    position: absolute;
+    top: 40px;
+    right: 60px;
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--prince-gray);
+    letter-spacing: 2px;
+  }
+
+  .tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--prince-green);
+    margin-bottom: 24px;
+    padding: 6px 16px;
+    border: 1px solid var(--prince-green);
+    border-radius: 20px;
+  }
+
+  /* ── SLIDE 1: COVER ── */
+  .cover {
+    background: var(--prince-black);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cover-logo {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 12px;
+    text-transform: uppercase;
+    color: var(--prince-green);
+    margin-bottom: 60px;
+  }
+
+  .cover h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 82px;
+    font-weight: 900;
+    line-height: 0.95;
+    margin-bottom: 30px;
+    background: linear-gradient(135deg, var(--prince-white) 0%, var(--prince-lime) 50%, var(--prince-green) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .cover p {
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--prince-gray);
+    letter-spacing: 1px;
+  }
+
+  .cover-line {
+    width: 80px;
+    height: 2px;
+    background: var(--prince-green);
+    margin: 40px auto;
+  }
+
+  .cover-meta {
+    font-size: 13px;
+    color: var(--prince-gray);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  .cover-ball {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 35%, var(--prince-lime), var(--prince-green), var(--prince-dark-green));
+    opacity: 0.08;
+    right: -80px;
+    top: -80px;
+  }
+
+  .cover-ball-2 {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 35%, var(--prince-lime), var(--prince-green));
+    opacity: 0.05;
+    left: -60px;
+    bottom: -60px;
+  }
+
+  /* ── SLIDE 2: BRIEF ── */
+  .brief { background: var(--prince-white); color: var(--prince-black); }
+  .brief .tag { color: var(--prince-dark-green); border-color: var(--prince-dark-green); }
+  .brief .slide-number { color: #bbb; }
+
+  .brief h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    font-weight: 900;
+    margin-bottom: 50px;
+    color: var(--prince-black);
+  }
+
+  .brief-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1100px;
+  }
+
+  .brief-item {
+    padding: 30px;
+    border-left: 3px solid var(--prince-green);
+  }
+
+  .brief-item h4 {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--prince-dark-green);
+    margin-bottom: 12px;
+  }
+
+  .brief-item p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+  }
+
+  .brief-item ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .brief-item ul li {
+    font-size: 15px;
+    color: #333;
+    padding: 4px 0;
+    padding-left: 16px;
+    position: relative;
+  }
+
+  .brief-item ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 12px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--prince-green);
+  }
+
+  /* ── SLIDE 3: POV ── */
+  .pov {
+    background: linear-gradient(135deg, #0a1a0a 0%, #0d2b0d 50%, var(--prince-black) 100%);
+    text-align: center;
+    align-items: center;
+  }
+
+  .pov h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 56px;
+    font-weight: 900;
+    margin-bottom: 20px;
+    color: var(--prince-lime);
+  }
+
+  .pov .pov-subtitle {
+    font-size: 18px;
+    color: var(--prince-green);
+    font-weight: 500;
+    margin-bottom: 50px;
+    letter-spacing: 1px;
+  }
+
+  .manifesto {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 50px;
+    border: 1px solid rgba(0, 200, 83, 0.2);
+    border-radius: 4px;
+    position: relative;
+  }
+
+  .manifesto::before {
+    content: '\201C';
+    position: absolute;
+    top: -20px;
+    left: 40px;
+    font-family: 'Playfair Display', serif;
+    font-size: 120px;
+    color: var(--prince-green);
+    opacity: 0.3;
+    line-height: 1;
+  }
+
+  .manifesto p {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 700;
+    font-style: italic;
+    line-height: 1.7;
+    color: var(--prince-white);
+  }
+
+  .pov-pillars {
+    display: flex;
+    gap: 40px;
+    margin-top: 50px;
+    max-width: 900px;
+  }
+
+  .pov-pillar {
+    flex: 1;
+    text-align: left;
+    padding: 24px;
+    border-top: 2px solid var(--prince-green);
+  }
+
+  .pov-pillar h5 {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--prince-green);
+    margin-bottom: 10px;
+  }
+
+  .pov-pillar p {
+    font-size: 14px;
+    color: #aaa;
+    line-height: 1.6;
+  }
+
+  /* ── SLIDE 4: CONCEPTS ── */
+  .concepts {
+    background: var(--prince-white);
+    color: var(--prince-black);
+  }
+  .concepts .tag { color: var(--prince-dark-green); border-color: var(--prince-dark-green); }
+  .concepts .slide-number { color: #bbb; }
+
+  .concepts h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    font-weight: 900;
+    margin-bottom: 50px;
+  }
+
+  .concept-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    max-width: 1200px;
+  }
+
+  .concept-card {
+    background: var(--prince-black);
+    color: var(--prince-white);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+
+  .concept-card:hover { transform: translateY(-4px); }
+
+  .concept-card-header {
+    padding: 20px 24px 16px;
+    border-bottom: 1px solid #222;
+  }
+
+  .concept-format {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--prince-green);
+    margin-bottom: 8px;
+  }
+
+  .concept-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 900;
+  }
+
+  .concept-card-body {
+    padding: 24px;
+  }
+
+  .concept-headline {
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 6px;
+    color: var(--prince-lime);
+  }
+
+  .concept-subhead {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--prince-green);
+    margin-bottom: 16px;
+  }
+
+  .concept-body {
+    font-size: 14px;
+    color: #aaa;
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+
+  .concept-visual {
+    font-size: 13px;
+    color: #666;
+    padding: 16px;
+    background: #111;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border-left: 2px solid var(--prince-green);
+  }
+
+  .concept-visual strong { color: var(--prince-gray); }
+
+  .concept-cta {
+    display: inline-block;
+    padding: 8px 20px;
+    border: 1px solid var(--prince-green);
+    color: var(--prince-green);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-radius: 20px;
+    margin-bottom: 16px;
+  }
+
+  .concept-why {
+    font-size: 12px;
+    color: var(--prince-gray);
+    font-style: italic;
+  }
+
+  /* ── SLIDE 5: HERO AD MOCK-UP ── */
+  .hero-ad {
+    background: var(--prince-black);
+    padding: 60px;
+    align-items: center;
+  }
+
+  .hero-ad h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    font-weight: 900;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .ad-mockup {
+    width: 100%;
+    max-width: 900px;
+    aspect-ratio: 16/10;
+    background: linear-gradient(160deg, #0a0a0a 0%, #111 40%, #0d2b0d 100%);
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.6);
+  }
+
+  /* Tennis court line pattern */
+  .ad-court-line-h {
+    position: absolute;
+    height: 1px;
+    background: rgba(255,255,255,0.06);
+  }
+  .ad-court-line-v {
+    position: absolute;
+    width: 1px;
+    background: rgba(255,255,255,0.06);
+  }
+
+  .ad-court-line-h.l1 { top: 30%; left: 10%; width: 80%; }
+  .ad-court-line-h.l2 { top: 70%; left: 10%; width: 80%; }
+  .ad-court-line-v.l3 { left: 50%; top: 10%; height: 80%; }
+  .ad-court-line-v.l4 { left: 10%; top: 30%; height: 40%; }
+  .ad-court-line-v.l5 { right: 10%; top: 30%; height: 40%; }
+
+  /* Tennis ball */
+  .ad-ball {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 40% 35%, #e4ff6b, #b2ff59, #69f0ae, #00c853);
+    right: 12%;
+    top: 18%;
+    box-shadow: 0 0 60px rgba(178, 255, 89, 0.3), inset 0 -4px 20px rgba(0,0,0,0.2);
+  }
+
+  .ad-ball::after {
+    content: '';
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    width: 80%;
+    height: 70%;
+    border: 2px solid rgba(255,255,255,0.15);
+    border-radius: 50%;
+    transform: rotate(-30deg);
+  }
+
+  /* Racket silhouette */
+  .ad-racket {
+    position: absolute;
+    left: 6%;
+    bottom: 8%;
+    width: 160px;
+    height: 320px;
+    opacity: 0.06;
+  }
+
+  .ad-racket-head {
+    width: 140px;
+    height: 180px;
+    border: 8px solid white;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 10px;
+  }
+
+  .ad-racket-handle {
+    width: 20px;
+    height: 160px;
+    background: white;
+    position: absolute;
+    bottom: 0;
+    left: 70px;
+    border-radius: 4px;
+  }
+
+  /* Ad typography */
+  .ad-content {
+    position: absolute;
+    left: 8%;
+    top: 15%;
+    max-width: 55%;
+    z-index: 2;
+  }
+
+  .ad-overline {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--prince-green);
+    margin-bottom: 20px;
+  }
+
+  .ad-headline {
+    font-family: 'Playfair Display', serif;
+    font-size: 64px;
+    font-weight: 900;
+    line-height: 1.0;
+    margin-bottom: 8px;
+    color: var(--prince-white);
+  }
+
+  .ad-headline .highlight {
+    color: var(--prince-lime);
+  }
+
+  .ad-subhead {
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--prince-green);
+    margin-bottom: 28px;
+    letter-spacing: 1px;
+  }
+
+  .ad-body-text {
+    font-size: 15px;
+    font-weight: 300;
+    color: #999;
+    line-height: 1.7;
+    max-width: 380px;
+    margin-bottom: 32px;
+  }
+
+  .ad-cta-btn {
+    display: inline-block;
+    padding: 14px 36px;
+    background: var(--prince-green);
+    color: var(--prince-black);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    border-radius: 2px;
+    text-decoration: none;
+  }
+
+  .ad-logo {
+    position: absolute;
+    bottom: 6%;
+    left: 8%;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    color: var(--prince-white);
+  }
+
+  .ad-tagline {
+    position: absolute;
+    bottom: 6%;
+    right: 8%;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--prince-gray);
+  }
+
+  .ad-label {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12px;
+    color: var(--prince-gray);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  /* ── SLIDE 6: MEDIA STRATEGY ── */
+  .media {
+    background: var(--prince-white);
+    color: var(--prince-black);
+  }
+  .media .tag { color: var(--prince-dark-green); border-color: var(--prince-dark-green); }
+  .media .slide-number { color: #bbb; }
+
+  .media h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    font-weight: 900;
+    margin-bottom: 16px;
+  }
+
+  .media-idea {
+    font-size: 20px;
+    font-weight: 300;
+    color: #555;
+    margin-bottom: 50px;
+    max-width: 700px;
+  }
+
+  .media-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    max-width: 1100px;
+  }
+
+  .media-section h3 {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--prince-dark-green);
+    margin-bottom: 24px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--prince-green);
+  }
+
+  /* Channel bars */
+  .channel-bar-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+
+  .channel-bar-label {
+    width: 120px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #333;
+  }
+
+  .channel-bar-track {
+    flex: 1;
+    height: 28px;
+    background: #eee;
+    border-radius: 3px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .channel-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--prince-green), var(--prince-lime));
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 10px;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--prince-black);
+  }
+
+  /* Phase timeline */
+  .phase-row {
+    display: flex;
+    margin-bottom: 20px;
+    align-items: flex-start;
+  }
+
+  .phase-marker {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--prince-green);
+    color: var(--prince-black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 800;
+    flex-shrink: 0;
+    margin-right: 16px;
+    margin-top: 2px;
+  }
+
+  .phase-content h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--prince-black);
+    margin-bottom: 4px;
+  }
+
+  .phase-duration {
+    font-size: 12px;
+    color: var(--prince-dark-green);
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+
+  .phase-content p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+  }
+
+  /* Channel cards */
+  .channel-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .channel-card {
+    padding: 16px;
+    background: #f0f0eb;
+    border-radius: 6px;
+  }
+
+  .channel-card h5 {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--prince-black);
+    margin-bottom: 4px;
+  }
+
+  .channel-card p {
+    font-size: 12px;
+    color: #666;
+    line-height: 1.4;
+  }
+
+  /* ── SLIDE 7: SUMMARY ── */
+  .summary {
+    background: linear-gradient(160deg, var(--prince-black) 0%, #0d2b0d 100%);
+    text-align: center;
+    align-items: center;
+  }
+
+  .summary h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 56px;
+    font-weight: 900;
+    margin-bottom: 50px;
+    background: linear-gradient(135deg, var(--prince-white), var(--prince-lime));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .takeaways {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    max-width: 1000px;
+  }
+
+  .takeaway {
+    text-align: center;
+    padding: 30px;
+  }
+
+  .takeaway-number {
+    font-size: 48px;
+    font-weight: 900;
+    color: var(--prince-green);
+    margin-bottom: 16px;
+    font-family: 'Playfair Display', serif;
+  }
+
+  .takeaway h4 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+
+  .takeaway p {
+    font-size: 14px;
+    color: var(--prince-gray);
+    line-height: 1.6;
+  }
+
+  .summary-cta {
+    margin-top: 60px;
+    font-size: 14px;
+    color: var(--prince-gray);
+    letter-spacing: 2px;
+  }
+
+  .summary-logo {
+    margin-top: 40px;
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: 10px;
+    color: var(--prince-green);
+    text-transform: uppercase;
+  }
+
+  /* Scroll indicator */
+  .scroll-hint {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    animation: bounce 2s ease infinite;
+  }
+
+  .scroll-hint span {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--prince-gray);
+  }
+
+  .scroll-arrow {
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin: 8px auto 0;
+    border-right: 1.5px solid var(--prince-gray);
+    border-bottom: 1.5px solid var(--prince-gray);
+    transform: rotate(45deg);
+  }
+
+  @keyframes bounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(8px); }
+  }
+
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .slide { padding: 40px; }
+    .brief-grid, .concept-cards, .media-grid { grid-template-columns: 1fr; }
+    .cover h1 { font-size: 52px; }
+    .ad-headline { font-size: 40px; }
+    .takeaways { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ════════════════════════════════════════════════════════
+     SLIDE 1: COVER
+     ════════════════════════════════════════════════════════ -->
+<section class="slide cover">
+  <div class="cover-ball"></div>
+  <div class="cover-ball-2"></div>
+  <div class="cover-logo">PRINCE</div>
+  <h1>Unconventional<br>By Nature</h1>
+  <p>A Creative Platform for the Next Era of Prince Tennis</p>
+  <div class="cover-line"></div>
+  <div class="cover-meta">Creative Pitch &mdash; March 2026</div>
+  <div class="scroll-hint">
+    <span>Scroll</span>
+    <span class="scroll-arrow"></span>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════
+     SLIDE 2: CREATIVE BRIEF
+     ════════════════════════════════════════════════════════ -->
+<section class="slide brief">
+  <span class="slide-number">02</span>
+  <span class="tag">Creative Brief</span>
+  <h2>The Strategic Foundation</h2>
+  <div class="brief-grid">
+    <div class="brief-item">
+      <h4>Brand Essence</h4>
+      <p>The original rule-breaker of tennis. Prince has always existed to prove that the unconventional way is the better way &mdash; from the oversized racket that changed the sport to the players who refused to play by the establishment's rules.</p>
+    </div>
+    <div class="brief-item">
+      <h4>Target Audience</h4>
+      <p>18&ndash;35 year-old style-conscious players and tennis culture enthusiasts who see tennis not as a country-club sport but as a form of self-expression. They discovered tennis through culture (fashion, Netflix, social media) as much as through competition.</p>
+    </div>
+    <div class="brief-item">
+      <h4>Key Insight</h4>
+      <p>A new generation is falling in love with tennis &mdash; but they don't see themselves in the sport's traditional, buttoned-up identity. They want to play on their own terms, and they're looking for a brand that gives them permission to do that.</p>
+    </div>
+    <div class="brief-item">
+      <h4>Brand Tension</h4>
+      <p>Tennis has always had rules &mdash; about how to dress, how to act, who belongs. Prince was born to break those rules, but the brand lost its voice. Now the culture is finally catching up to what Prince always believed.</p>
+    </div>
+    <div class="brief-item">
+      <h4>Single-Minded Proposition</h4>
+      <p>Prince is the tennis brand for people who play the game their own way.</p>
+    </div>
+    <div class="brief-item">
+      <h4>Reasons to Believe</h4>
+      <ul>
+        <li>Invented the oversized racket &mdash; mocked, then universally adopted</li>
+        <li>Phantom &amp; Ripstick lines: engineered for feel and spin, the weapons of creative players</li>
+        <li>Heritage of backing unconventional champions (Rafter, Capriati)</li>
+        <li>DTC-forward model that connects directly with the player community</li>
+      </ul>
+    </div>
+    <div class="brief-item">
+      <h4>Tone &amp; Manner</h4>
+      <p>Confident but never arrogant. Culturally fluent. A little irreverent. Speaks to players as insiders, not consumers. More downtown cool than country club.</p>
+    </div>
+    <div class="brief-item">
+      <h4>Mandatories</h4>
+      <ul>
+        <li>"Unconventional by Nature" tagline integration</li>
+        <li>Hero the Phantom and Ripstick racket lines</li>
+        <li>Drive DTC traffic (princetennnis.com)</li>
+        <li>Establish cultural credibility beyond the court</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════
+     SLIDE 3: CREATIVE POV
+     ════════════════════════════════════════════════════════ -->
+<section class="slide pov">
+  <span class="slide-number">03</span>
+  <span class="tag">Creative POV</span>
+  <h2>The Wrong Way Won</h2>
+  <p class="pov-subtitle">The strategic and cultural opportunity for Prince Tennis</p>
+  <div class="manifesto">
+    <p>They said the racket was too big. They said the grip was wrong. They said tennis belonged to the quiet and the polished. Prince didn't listen. We built the racket they laughed at &mdash; and it changed the game forever. Now a new generation is picking up the sport, and they're doing it all wrong too. Wrong clothes. Wrong attitude. Wrong side of the tracks. We say: perfect. Because in tennis, as in life, the wrong way has a funny habit of becoming the only way. Prince. Unconventional by Nature.</p>
+  </div>
+  <div class="pov-pillars">
+    <div class="pov-pillar">
+      <h5>Cultural Context</h5>
+      <p>Tennis is having its biggest cultural moment in decades. Tenniscore fashion, Break Point drama, and a new wave of charismatic players are bringing the sport to audiences who never cared before.</p>
+    </div>
+    <div class="pov-pillar">
+      <h5>Strategic Opportunity</h5>
+      <p>The legacy brands (Wilson, Head, Babolat) are doubling down on performance and tradition. No one is speaking to the cultural player &mdash; the one who sees a racket as a style statement as much as a weapon.</p>
+    </div>
+    <div class="pov-pillar">
+      <h5>Brand Role in Culture</h5>
+      <p>Prince is the gateway brand for tennis outsiders. We don't ask you to earn your place in the sport &mdash; we hand you a racket and tell you to play your game, your way.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════
+     SLIDE 4: AD CONCEPTS
+     ════════════════════════════════════════════════════════ -->
+<section class="slide concepts">
+  <span class="slide-number">04</span>
+  <span class="tag">Ad Concepts</span>
+  <h2>Three Ways In</h2>
+  <div class="concept-cards">
+
+    <!-- Concept 1 -->
+    <div class="concept-card">
+      <div class="concept-card-header">
+        <div class="concept-format">Print / OOH / Digital</div>
+        <h3>Wrong Racket</h3>
+      </div>
+      <div class="concept-card-body">
+        <div class="concept-headline">They Said It Was<br>the Wrong Racket.</div>
+        <div class="concept-subhead">They were right. It changed everything.</div>
+        <p class="concept-body">A bold typographic campaign that reclaims every criticism ever leveled at Prince and reframes it as proof of innovation. Each execution features a historical criticism turned on its head.</p>
+        <div class="concept-visual"><strong>Visual:</strong> Stark black background. The Prince Phantom racket, shot dramatically with a single neon-green accent light. The racket casts an oversized shadow &mdash; a nod to the original oversized innovation. Typography is massive and unapologetic.</div>
+        <span class="concept-cta">Play Your Way &rarr;</span>
+        <p class="concept-why">Turns brand weakness into brand mythology, creating an origin story that new audiences can rally behind.</p>
+      </div>
+    </div>
+
+    <!-- Concept 2 -->
+    <div class="concept-card">
+      <div class="concept-card-header">
+        <div class="concept-format">Digital Video / Social</div>
+        <h3>Court Outsiders</h3>
+      </div>
+      <div class="concept-card-body">
+        <div class="concept-headline">The Court Doesn't<br>Care Who You Are.</div>
+        <div class="concept-subhead">Neither do we.</div>
+        <p class="concept-body">A docu-style video series following real players who came to tennis from unexpected places &mdash; a skateboarder, a street dancer, a DJ &mdash; all finding their game with Prince rackets on non-traditional courts.</p>
+        <div class="concept-visual"><strong>Visual:</strong> Cinematic 16:9 vignettes shot on location. Rooftop courts, parking lots with painted lines, beach setups. Gritty, handheld camera. Each player's style is reflected in their play. Interspersed with quick-cut rally sequences.</div>
+        <span class="concept-cta">Watch Their Story &rarr;</span>
+        <p class="concept-why">Builds brand community by celebrating real outsiders, creating authentic content that earns social sharing.</p>
+      </div>
+    </div>
+
+    <!-- Concept 3 -->
+    <div class="concept-card">
+      <div class="concept-card-header">
+        <div class="concept-format">Social-First / Experiential</div>
+        <h3>Wrong Club</h3>
+      </div>
+      <div class="concept-card-body">
+        <div class="concept-headline">Welcome to the<br>Wrong Club.</div>
+        <div class="concept-subhead">Membership has no requirements.</div>
+        <p class="concept-body">A social-first community play that inverts the exclusivity of tennis clubs. Pop-up "Wrong Club" events in unexpected venues with open-play sessions, DJs, and limited merch drops.</p>
+        <div class="concept-visual"><strong>Visual:</strong> Bold graphic identity with a flipped/inverted Prince "P" logo as the Wrong Club mark. Social content is raw, shot on phones, mixed with designed typographic posts. Event photography has warehouse-party energy meets sport.</div>
+        <span class="concept-cta">Join the Wrong Club &rarr;</span>
+        <p class="concept-why">Creates an ownable community platform that drives DTC engagement and positions Prince as a cultural hub, not just a gear brand.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════
+     SLIDE 5: HERO AD MOCK-UP
+     ════════════════════════════════════════════════════════ -->
+<section class="slide hero-ad">
+  <span class="slide-number">05</span>
+  <span class="tag">Hero Ad Mock-Up</span>
+  <h2>Concept 1: Wrong Racket</h2>
+
+  <div class="ad-mockup">
+    <!-- Court lines (subtle) -->
+    <div class="ad-court-line-h l1"></div>
+    <div class="ad-court-line-h l2"></div>
+    <div class="ad-court-line-v l3"></div>
+    <div class="ad-court-line-v l4"></div>
+    <div class="ad-court-line-v l5"></div>
+
+    <!-- Tennis ball -->
+    <div class="ad-ball"></div>
+
+    <!-- Racket silhouette -->
+    <div class="ad-racket">
+      <div class="ad-racket-head"></div>
+      <div class="ad-racket-handle"></div>
+    </div>
+
+    <!-- Ad copy -->
+    <div class="ad-content">
+      <div class="ad-overline">Prince Tennis</div>
+      <div class="ad-headline">
+        They Said<br>It Was the<br><span class="highlight">Wrong</span><br>Racket.
+      </div>
+      <div class="ad-subhead">They were right. It changed everything.</div>
+      <p class="ad-body-text">In 1976, Prince built a racket the tennis world called a mistake. It was too big. Too unconventional. Too different. It became the most copied innovation in the history of the sport. The Phantom carries that legacy forward.</p>
+      <a class="ad-cta-btn" href="#">Play Your Way</a>
+    </div>
+
+    <!-- Logo & tagline -->
+    <div class="ad-logo">PRINCE</div>
+    <div class="ad-tagline">Unconventional by Nature</div>
+  </div>
+  <p class="ad-label">Concept 1 &mdash; Print / OOH / Digital Hero Execution</p>
+</section>
+
+<!-- ════════════════════════════════════════════════════════
+     SLIDE 6: MEDIA STRATEGY
+     ════════════════════════════════════════════════════════ -->
+<section class="slide media">
+  <span class="slide-number">06</span>
+  <span class="tag">Media Strategy</span>
+  <h2>Media as a Creative Canvas</h2>
+  <p class="media-idea">Place Prince where traditional tennis brands would never go &mdash; because Prince has never been where you'd expect it to be.</p>
+
+  <div class="media-grid">
+    <!-- Budget Split -->
+    <div class="media-section">
+      <h3>Budget Allocation</h3>
+      <div class="channel-bar-row">
+        <span class="channel-bar-label">Social / Content</span>
+        <div class="channel-bar-track">
+          <div class="channel-bar-fill" style="width:35%">35%</div>
+        </div>
+      </div>
+      <div class="channel-bar-row">
+        <span class="channel-bar-label">Digital Video</span>
+        <div class="channel-bar-track">
+          <div class="channel-bar-fill" style="width:25%">25%</div>
+        </div>
+      </div>
+      <div class="channel-bar-row">
+        <span class="channel-bar-label">OOH / Print</span>
+        <div class="channel-bar-track">
+          <div class="channel-bar-fill" style="width:20%">20%</div>
+        </div>
+      </div>
+      <div class="channel-bar-row">
+        <span class="channel-bar-label">Experiential</span>
+        <div class="channel-bar-track">
+          <div class="channel-bar-fill" style="width:12%">12%</div>
+        </div>
+      </div>
+      <div class="channel-bar-row">
+        <span class="channel-bar-label">Influencer</span>
+        <div class="channel-bar-track">
+          <div class="channel-bar-fill" style="width:8%">8%</div>
+        </div>
+      </div>
+
+      <br>
+      <h3>Channel Roles</h3>
+      <div class="channel-cards">
+        <div class="channel-card">
+          <h5>Instagram / TikTok</h5>
+          <p>Community hub for Wrong Club. Raw content, player stories, style culture. Always-on.</p>
+        </div>
+        <div class="channel-card">
+          <h5>YouTube / CTV</h5>
+          <p>Court Outsiders docuseries. 60s hero + 15s cut-downs. Pre-roll targeting tennis &amp; lifestyle.</p>
+        </div>
+        <div class="channel-card">
+          <h5>OOH / Wild Posting</h5>
+          <p>Wrong Racket campaign in unexpected locations: skate parks, music venues, transit. Not country clubs.</p>
+        </div>
+        <div class="channel-card">
+          <h5>Pop-Up Events</h5>
+          <p>Wrong Club activations in NYC, LA, Miami, London around Grand Slam moments. Open play + culture.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Phasing -->
+    <div class="media-section">
+      <h3>Campaign Phasing</h3>
+      <div class="phase-row">
+        <div class="phase-marker">1</div>
+        <div class="phase-content">
+          <h4>IGNITE &mdash; Cultural Provocation</h4>
+          <div class="phase-duration">Weeks 1&ndash;3</div>
+          <p>Launch Wrong Racket OOH and wild posting in 5 cities. Teaser content on social. No product shown &mdash; just the manifesto. Generate conversation and earned media.</p>
+        </div>
+      </div>
+      <div class="phase-row">
+        <div class="phase-marker">2</div>
+        <div class="phase-content">
+          <h4>AMPLIFY &mdash; Brand Story</h4>
+          <div class="phase-duration">Weeks 4&ndash;8</div>
+          <p>Drop Court Outsiders episodes weekly. Hero video across YouTube and CTV. Digital Wrong Racket executions with product reveals. Drive to DTC.</p>
+        </div>
+      </div>
+      <div class="phase-row">
+        <div class="phase-marker">3</div>
+        <div class="phase-content">
+          <h4>ACTIVATE &mdash; Community</h4>
+          <div class="phase-duration">Weeks 8&ndash;14</div>
+          <p>Wrong Club pop-ups in key cities. UGC engine: players share their "wrong" tennis stories. Limited collab merch drops. Retarget engaged audiences to close sales.</p>
+        </div>
+      </div>
+      <div class="phase-row">
+        <div class="phase-marker">4</div>
+        <div class="phase-content">
+          <h4>SUSTAIN &mdash; Always-On</h4>
+          <div class="phase-duration">Ongoing</div>
+          <p>Wrong Club becomes a permanent community platform. Evergreen social content. Influencer seeding. CRM-driven retention and loyalty. Timed spikes around Grand Slams.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════
+     SLIDE 7: SUMMARY
+     ════════════════════════════════════════════════════════ -->
+<section class="slide summary">
+  <span class="slide-number">07</span>
+  <span class="tag">Key Takeaways</span>
+  <h2>Why This Wins</h2>
+  <div class="takeaways">
+    <div class="takeaway">
+      <div class="takeaway-number">01</div>
+      <h4>Ownable Territory</h4>
+      <p>"The Wrong Way Won" is a brand platform only Prince can credibly own. It's rooted in real brand history and speaks directly to the cultural outsiders now entering tennis.</p>
+    </div>
+    <div class="takeaway">
+      <div class="takeaway-number">02</div>
+      <h4>Culture + Commerce</h4>
+      <p>Three concepts that work across the funnel: Wrong Racket builds brand, Court Outsiders drives consideration, Wrong Club converts community into customers.</p>
+    </div>
+    <div class="takeaway">
+      <div class="takeaway-number">03</div>
+      <h4>Built to Scale</h4>
+      <p>The platform grows with Prince. New "wrong" stories, new outsiders, new cities, new collabs. It's a brand world, not just a campaign. It makes Prince a cultural destination.</p>
+    </div>
+  </div>
+  <p class="summary-cta">Let's play the wrong way together.</p>
+  <div class="summary-logo">PRINCE</div>
+</section>
+
+</body>
+</html>

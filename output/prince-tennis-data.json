@@ -1,0 +1,86 @@
+{
+  "brand": "Prince Tennis",
+  "generated_at": "2026-03-07",
+  "brief": {
+    "brand_essence": "The original rule-breaker of tennis. Prince has always existed to prove that the unconventional way is the better way.",
+    "target_audience": "18-35 year-old style-conscious players and tennis culture enthusiasts who see tennis as self-expression, not a country-club sport.",
+    "key_insight": "A new generation is falling in love with tennis but they don't see themselves in the sport's traditional, buttoned-up identity. They want a brand that gives them permission to play on their own terms.",
+    "brand_tension": "Tennis has always had rules about how to dress, act, and who belongs. Prince was born to break those rules but lost its voice. Now the culture is finally catching up.",
+    "single_minded_proposition": "Prince is the tennis brand for people who play the game their own way.",
+    "reasons_to_believe": [
+      "Invented the oversized racket — mocked, then universally adopted",
+      "Phantom & Ripstick lines: engineered for feel and spin, the weapons of creative players",
+      "Heritage of backing unconventional champions (Rafter, Capriati)",
+      "DTC-forward model that connects directly with the player community"
+    ],
+    "tone_and_manner": "Confident but never arrogant. Culturally fluent. A little irreverent. More downtown cool than country club.",
+    "mandatories": [
+      "Unconventional by Nature tagline integration",
+      "Hero the Phantom and Ripstick racket lines",
+      "Drive DTC traffic",
+      "Establish cultural credibility beyond the court"
+    ]
+  },
+  "pov": {
+    "pov_title": "The Wrong Way Won",
+    "cultural_context": "Tennis is having its biggest cultural moment in decades. Tenniscore fashion, Break Point drama, and charismatic new players are bringing the sport to audiences who never cared before.",
+    "strategic_opportunity": "Legacy brands are doubling down on performance and tradition. No one is speaking to the cultural player who sees a racket as a style statement as much as a weapon.",
+    "creative_territory": "Reclaiming wrongness as rightness — turning every unconventional choice into proof that Prince has always been ahead.",
+    "brand_role_in_culture": "Prince is the gateway brand for tennis outsiders. We don't ask you to earn your place — we hand you a racket and tell you to play your game, your way.",
+    "manifesto": "They said the racket was too big. They said the grip was wrong. They said tennis belonged to the quiet and the polished. Prince didn't listen. We built the racket they laughed at — and it changed the game forever. Now a new generation is picking up the sport, and they're doing it all wrong too. Wrong clothes. Wrong attitude. Wrong side of the tracks. We say: perfect. Because in tennis, as in life, the wrong way has a funny habit of becoming the only way. Prince. Unconventional by Nature."
+  },
+  "concepts": [
+    {
+      "concept_name": "Wrong Racket",
+      "format": "Print / OOH / Digital",
+      "headline": "They Said It Was the Wrong Racket.",
+      "subhead": "They were right. It changed everything.",
+      "body_copy": "A bold typographic campaign that reclaims every criticism ever leveled at Prince and reframes it as proof of innovation. Each execution features a historical criticism turned on its head.",
+      "visual_description": "Stark black background. The Prince Phantom racket shot dramatically with a single neon-green accent light. The racket casts an oversized shadow. Typography is massive and unapologetic.",
+      "call_to_action": "Play Your Way",
+      "why_it_works": "Turns brand weakness into brand mythology, creating an origin story that new audiences can rally behind."
+    },
+    {
+      "concept_name": "Court Outsiders",
+      "format": "Digital Video / Social",
+      "headline": "The Court Doesn't Care Who You Are.",
+      "subhead": "Neither do we.",
+      "body_copy": "A docu-style video series following real players who came to tennis from unexpected places — a skateboarder, a street dancer, a DJ — all finding their game with Prince rackets on non-traditional courts.",
+      "visual_description": "Cinematic 16:9 vignettes shot on location. Rooftop courts, parking lots, beach setups. Gritty handheld camera. Each player's style reflected in their play. Quick-cut rally sequences.",
+      "call_to_action": "Watch Their Story",
+      "why_it_works": "Builds brand community by celebrating real outsiders, creating authentic content that earns social sharing."
+    },
+    {
+      "concept_name": "Wrong Club",
+      "format": "Social-First / Experiential",
+      "headline": "Welcome to the Wrong Club.",
+      "subhead": "Membership has no requirements.",
+      "body_copy": "A social-first community play that inverts the exclusivity of tennis clubs. Pop-up Wrong Club events in unexpected venues with open-play sessions, DJs, and limited merch drops.",
+      "visual_description": "Bold graphic identity with a flipped/inverted Prince P logo. Social content is raw, shot on phones, mixed with designed typographic posts. Event photography has warehouse-party energy meets sport.",
+      "call_to_action": "Join the Wrong Club",
+      "why_it_works": "Creates an ownable community platform that drives DTC engagement and positions Prince as a cultural hub."
+    }
+  ],
+  "media_strategy": {
+    "media_idea": "Place Prince where traditional tennis brands would never go — because Prince has never been where you'd expect it to be.",
+    "channels": [
+      {"channel": "Instagram / TikTok", "role": "Community hub", "format": "Raw content, player stories, style culture", "timing": "Always-on"},
+      {"channel": "YouTube / CTV", "role": "Brand storytelling", "format": "Court Outsiders docuseries 60s + 15s cut-downs", "timing": "Weeks 4-8 launch"},
+      {"channel": "OOH / Wild Posting", "role": "Cultural provocation", "format": "Wrong Racket campaign in unexpected locations", "timing": "Weeks 1-3 launch"},
+      {"channel": "Pop-Up Events", "role": "Community activation", "format": "Wrong Club events in NYC, LA, Miami, London", "timing": "Weeks 8-14"}
+    ],
+    "phasing": [
+      {"phase_name": "IGNITE", "duration": "Weeks 1-3", "objective": "Cultural provocation", "key_actions": "OOH and wild posting in 5 cities. Teaser social. No product — just manifesto."},
+      {"phase_name": "AMPLIFY", "duration": "Weeks 4-8", "objective": "Brand story", "key_actions": "Court Outsiders weekly drops. Hero video. Digital Wrong Racket with product reveals."},
+      {"phase_name": "ACTIVATE", "duration": "Weeks 8-14", "objective": "Community building", "key_actions": "Wrong Club pop-ups. UGC engine. Limited collab merch. Retargeting to close sales."},
+      {"phase_name": "SUSTAIN", "duration": "Ongoing", "objective": "Always-on presence", "key_actions": "Wrong Club as permanent platform. Evergreen social. Influencer seeding. Grand Slam spikes."}
+    ],
+    "budget_split": [
+      {"channel": "Social / Content", "percentage": 35},
+      {"channel": "Digital Video", "percentage": 25},
+      {"channel": "OOH / Print", "percentage": 20},
+      {"channel": "Experiential", "percentage": 12},
+      {"channel": "Influencer", "percentage": 8}
+    ]
+  }
+}
